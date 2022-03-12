@@ -1,0 +1,1150 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>系统组件 · 源码看《饥荒》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LongFei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="component.html" />
+    
+    
+    <link rel="prev" href="../main/c5_brain.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html">
+            
+                    
+                    第一章 世界的构成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#万物起源">
+            
+                    
+                    万物起源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#灵魂">
+            
+                    
+                    灵魂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#血肉">
+            
+                    
+                    血肉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#动起来">
+            
+                    
+                    动起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#AI决策">
+            
+                    
+                    AI决策
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#世界地图">
+            
+                    
+                    世界地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#交互界面">
+            
+                    
+                    交互界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html">
+            
+                    
+                    第二章 entity与prefab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#prefab的定义">
+            
+                    
+                    prefab的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#初始化函数fn">
+            
+                    
+                    初始化函数fn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html">
+            
+                    
+                    第三章 组件与动作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#定义">
+            
+                    
+                    定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#replica">
+            
+                    
+                    replica
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html">
+            
+                    
+                    第四章 动起来 - 状态图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#StateGraph概览">
+            
+                    
+                    StateGraph概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#State的构造">
+            
+                    
+                    State的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#Handler的构造">
+            
+                    
+                    Handler的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html">
+            
+                    
+                    第五章 思想 - 让生物拥有智慧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#概览">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#状态">
+            
+                    
+                    状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#节点">
+            
+                    
+                    节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#游戏实现">
+            
+                    
+                    游戏实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">参考手册</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="system.html">
+            
+                <a href="system.html">
+            
+                    
+                    系统组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="component.html">
+            
+                <a href="component.html">
+            
+                    
+                    常见Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="brain_dec.html">
+            
+                <a href="brain_dec.html">
+            
+                    
+                    Brain：修饰和组合节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="brain_action.html">
+            
+                <a href="brain_action.html">
+            
+                    
+                    Brain：动作节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >系统组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;">&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;</h1>
+<p>&#x7CFB;&#x7EDF;&#x5E95;&#x5C42;&#x7EC4;&#x4EF6;&#xFF0C;&#x662F;&#x88AB;&#x5C01;&#x88C5;&#x597D;&#x7684;&#xFF0C;&#x65E0;&#x6CD5;&#x770B;&#x5230;&#x5E95;&#x5C42;&#x7684;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x80FD;&#x6839;&#x636E;&#x5B98;&#x65B9;&#x4EE3;&#x7801;&#x6765;&#x731C;&#x6D4B;&#x7528;&#x6CD5;&#x3002;&#x4E4B;&#x6240;&#x4EE5;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x5F80;&#x5F80;&#x662F;&#x56E0;&#x4E3A;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#x9700;&#x8981;&#x8C03;&#x7528;&#x975E;&#x5E38;&#x5E95;&#x5C42;&#x7684;API&#x6216;&#x8005;&#x9700;&#x8981;&#x9AD8;&#x901F;&#x8FD0;&#x7B97;&#x8282;&#x7EA6;&#x6027;&#x80FD;&#x3002;&#x5B83;&#x4EEC;&#x88AB;&#x5E7F;&#x6CDB;&#x5730;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x91CC;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x89C1;&#x5230;&#x3002;&#x672C;&#x6587;&#x4F1A;&#x4ECB;&#x7ECD;&#x5E38;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;&#x4EE5;&#x53CA;&#x5176;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<h2 id="animstate">AnimState</h2>
+<p>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x5BF9;&#x89D2;&#x8272;&#x7684;&#x5916;&#x89C2;&#x548C;&#x52A8;&#x753B;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x3002;&#x4EBA;&#x7269;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x4F5C;&#x4F1A;&#x64AD;&#x653E;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4F69;&#x6234;&#x67D0;&#x4E9B;&#x88C5;&#x5907;&#x4F1A;&#x6539;&#x53D8;&#x5916;&#x89C2;&#xFF0C;&#x4EE5;&#x53CA;&#x6539;&#x53D8;&#x89C6;&#x89C9;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x751A;&#x81F3;&#x8BA1;&#x91CF;&#x6761;&#x7684;&#x53D8;&#x5316;&#x7B49;&#x3002;&#x51E1;&#x662F;&#x548C;&#x7269;&#x4F53;&#x5F62;&#x6001;&#x53D8;&#x5316;&#x6709;&#x5173;&#x7684;&#xFF0C;&#x90FD;&#x7531;AnimState&#x6765;&#x64CD;&#x4F5C;&#x5B9E;&#x73B0;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PlayAnimation</td>
+<td>&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4F1A;&#x7ACB;&#x523B;&#x4E2D;&#x65AD;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x7684;&#x64AD;&#x653E;</td>
+<td>anim &#x52A8;&#x753B;&#x540D;; loop &#x662F;&#x5426;&#x91CD;&#x590D;&#xFF0C;&#x53EF;&#x7701;&#x7565;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;fasle</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>PushAnimation</td>
+<td>&#x5C06;&#x6307;&#x5B9A;&#x52A8;&#x753B;&#x63A8;&#x9001;&#x5230;&#x64AD;&#x653E;&#x5E8F;&#x5217;&#x4E2D;&#xFF0C;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x5B8C;&#x540E;&#x4F1A;&#x63A5;&#x7740;&#x64AD;&#x653E;&#x8FD9;&#x4E2A;&#x52A8;&#x753B;&#xFF0C;&#x5E38;&#x89C1;&#x4E8E;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x6765;&#x8868;&#x73B0;&#x4EBA;&#x7269;&#x7684;&#x573A;&#x666F;</td>
+<td>anim &#x52A8;&#x753B;&#x540D;; loop &#x662F;&#x5426;&#x91CD;&#x590D;&#xFF0C;&#x53EF;&#x7701;&#x7565;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;fasle</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetBuild</td>
+<td>&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x5916;&#x89C2;&#x3002;&#x6BD4;&#x5982;&#x5154;&#x5B50;&#x6709;&#x590F;&#x3001;&#x51AC;&#x4E24;&#x79CD;&#x5F62;&#x6001;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;Build&#x6765;&#x5B9E;&#x73B0;&#x7684;</td>
+<td>build &#x5916;&#x89C2;&#x540D;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetBank</td>
+<td>&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x52A8;&#x753B;&#x7EC4;&#x3002;&#x73A9;&#x5BB6;&#x7AD9;&#x5728;&#x5730;&#x4E0A;&#x548C;&#x9A91;&#x5728;&#x725B;&#x4E0A;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E24;&#x5957;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;Bank&#x6765;&#x5B9E;&#x73B0;&#x7684;</td>
+<td>bank &#x52A8;&#x753B;&#x7EC4;&#x540D;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>Show</td>
+<td>&#x5C55;&#x793A;&#x67D0;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x901A;&#x5E38;&#x548C;Hide&#x642D;&#x914D;&#x4F7F;&#x7528;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x88C5;&#x5907;&#x6B66;&#x5668;&#x65F6;&#xFF0C;&#x4F1A;&#x9690;&#x85CF;ARM_normal&#xFF0C;&#x663E;&#x793A;ARM_carry&#xFF0C;&#x4EBA;&#x7269;&#x7684;&#x624B;&#x5C31;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;</td>
+<td>part &#x90E8;&#x5206;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>&#x9690;&#x85CF;&#x67D0;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x548C;Show&#x642D;&#x914D;&#x4F7F;&#x7528;</td>
+<td>part &#x90E8;&#x5206;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>OverrideSymbol</td>
+<td>&#x8986;&#x76D6;&#x67D0;&#x4E2A;&#x6807;&#x8BB0;&#x70B9;&#xFF0C;&#x5E38;&#x89C1;&#x4E8E;&#x88C5;&#x5907;&#x6B66;&#x5668;&#x540E;&#xFF0C;&#x624B;&#x4E0A;&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x628A;&#x6B66;&#x5668;&#x3002;</td>
+<td>inst_symbol &#x8981;&#x8986;&#x76D6;&#x7684;&#x6807;&#x8BB0;&#x70B9; ;swap_build &#x7528;&#x4E8E;&#x66FF;&#x6362;&#x7684;build ;swap_symbol &#x7528;&#x4E8E;&#x66FF;&#x6362;&#x7684;build&#x4E0A;&#x7684;&#x6807;&#x8BB0;&#x70B9;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>ClearOverrideSymbol</td>
+<td>&#x6E05;&#x9664;&#x6307;&#x5B9A;&#x6807;&#x8BB0;&#x70B9;&#x7684;&#x8986;&#x76D6;</td>
+<td>inst_symbol &#x8981;&#x6E05;&#x9664;&#x8986;&#x76D6;&#x7684;&#x6807;&#x8BB0;&#x70B9;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>IsCurrentAnimation</td>
+<td>&#x68C0;&#x6D4B;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x7684;&#x52A8;&#x753B;&#x662F;&#x5426;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x52A8;&#x753B;</td>
+<td>anim &#x52A8;&#x753B;&#x540D;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetTime</td>
+<td>&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x505C;&#x7559;&#x5728;&#x7B2C;&#x51E0;&#x79D2;</td>
+<td>time &#x505C;&#x7559;&#x4F4D;&#x7F6E;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetCurrentAnimationTime</td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x505C;&#x7559;&#x5728;&#x7B2C;&#x51E0;&#x79D2;</td>
+<td>&#x65E0;</td>
+<td>time &#x505C;&#x7559;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>GetCurrentAnimationLength</td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x7684;&#x957F;&#x5EA6;</td>
+<td>&#x65E0;</td>
+<td>length &#x52A8;&#x753B;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>SetPercent</td>
+<td>&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x901A;&#x8FC7;&#x52A8;&#x753B;&#x5E27;&#x6765;&#x8868;&#x73B0;&#x6570;&#x503C;&#x7684;&#x7269;&#x54C1;&#x5F88;&#x6709;&#x7528;&#x3002;&#x6BD4;&#x5982;&#x96E8;&#x91CF;&#x8BA1;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#xFF0C;&#x4ECE;0&#x5230;100%&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x6570;&#x503C;&#x8BBE;&#x7F6E;&#x76F8;&#x5E94;&#x7684;&#x767E;&#x5206;&#x6BD4;</td>
+<td>anim &#x52A8;&#x753B;&#x540D;; percent &#x767E;&#x5206;&#x6BD4;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetFinalOffset</td>
+<td>&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x6839;&#x636E;&#x51FD;&#x6570;&#x540D;&#x731C;&#x6D4B;&#xFF0C;&#x662F;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x7684;&#x5E27;&#x504F;&#x79FB;&#x91CF;&#x3002;</td>
+<td>offset &#x52A8;&#x753B;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x8D1F;&#x6570;&#x3002;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetScale</td>
+<td>&#x8BBE;&#x7F6E;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;</td>
+<td>length_scale &#x957F;&#x5EA6;&#x7F29;&#x653E;;width_scale &#x5BBD;&#x5EA6;&#x7F29;&#x653E; &#x3002;&#x53D6;&#x503C;&#x586B;&#x5C0F;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8D1F;&#x6570;&#xFF0C;&#x5219;&#x662F;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x5411;&#x98A0;&#x5012;&#x3002;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetMultColour</td>
+<td>&#x8BBE;&#x7F6E;&#x89D2;&#x8272;&#x7684;r,g,b,a&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E09;&#x4E2A;&#x989C;&#x8272;+&#x900F;&#x660E;&#x5EA6;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x8BA9;&#x89D2;&#x8272;&#x53D8;&#x5F97;&#x900F;&#x660E;</td>
+<td>r,g,b,a&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7EA2;&#xFF0C;&#x7EFF;&#xFF0C;&#x84DD;&#x7684;&#x989C;&#x8272;&#x503C;&#x4EE5;&#x53CA;&#x900F;&#x660E;&#x5EA6;&#x3002;&#x53D6;&#x503C;&#x5747;&#x5728;[0,1]&#x4E4B;&#x95F4;&#x3002;&#x5BF9;&#x4E8E;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x53D6;0&#x65F6;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x900F;&#x660E;&#x3002;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetMultColour</td>
+<td>&#x83B7;&#x53D6;&#x89D2;&#x8272;&#x7684;r,g,b,a</td>
+<td>&#x65E0;</td>
+<td>r,g,b,a &#x540C;SetMultColour&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>SetAddColour</td>
+<td>&#x8BBE;&#x7F6E;&#x9644;&#x52A0;&#x989C;&#x8272;</td>
+<td>r,g,b,a&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7EA2;&#xFF0C;&#x7EFF;&#xFF0C;&#x84DD;&#x7684;&#x989C;&#x8272;&#x503C;&#x4EE5;&#x53CA;&#x900F;&#x660E;&#x5EA6;&#x3002;&#x53D6;&#x503C;&#x5747;&#x5728;[0,1]&#x4E4B;&#x95F4;&#x3002;&#x5BF9;&#x4E8E;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x53D6;0&#x65F6;&#x5C31;&#x662F;&#x5B8C;&#x5168;&#x900F;&#x660E;&#x3002;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetBloomEffectHandle</td>
+<td>&#x8BBE;&#x7F6E;Bloom&#x6548;&#x679C;&#x7684;&#x5904;&#x7406;&#x5668;</td>
+<td>path &#x5904;&#x7406;&#x5668;&#x8DEF;&#x5F84;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetOrientation</td>
+<td>&#x8BBE;&#x7F6E;&#x521A;&#x4F53;&#x8F74;&#x65B9;&#x5411;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x8F74;&#x65B9;&#x5411;&#x4F1A;&#x5F71;&#x54CD;&#x770B;&#x5230;&#x7684;&#x89C6;&#x89C9;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x6C60;&#x5858;&#x770B;&#x8D77;&#x6765;&#x662F;&#x8D34;&#x7740;&#x5730;&#x9762;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x8BBE;&#x7F6E;&#x4E86;&#x8FD9;&#x4E00;&#x53C2;&#x6570;&#x4E3A;ANIM_ORIENTATION.OnGround</td>
+<td>direction &#x65B9;&#x5411;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x4E8E;constants.lua&#x4E2D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;ANIM_ORIENTATION&#x4E0B;&#x7684;&#x5404;&#x4E2A;&#x503C;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetLayer</td>
+<td>&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#xFF0C;&#x56FE;&#x5C42;&#x662F;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x6446;&#x653E;&#x987A;&#x5E8F;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x571F;&#x5730;&#x662F;&#x6700;&#x4E0B;&#x4E00;&#x5C42;&#xFF0C;&#x7136;&#x540E;&#x519C;&#x573A;&#x662F;&#x4E2D;&#x95F4;&#x5C42;&#xFF0C;&#x519C;&#x573A;&#x91CC;&#x7684;&#x4F5C;&#x7269;&#x662F;&#x6700;&#x4E0A;&#x5C42;&#x3002;&#x5728;&#x6784;&#x5EFA;&#x4E00;&#x4E9B;&#x591A;&#x5C42;&#x7ED3;&#x6784;&#x7684;&#x4E1C;&#x897F;&#x65F6;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x56FE;&#x5C42;&#x3002;</td>
+<td>layer &#x56FE;&#x5C42;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x4E8E;constants.lua&#x4E2D;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;LAYER_BACKGROUND/LAYER_WORLD/LAYER_WORLD_BACKGROUND/LAYER_WORLD_CEILING/LAYER_FRONTEND</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetSortOrder</td>
+<td>&#x8BBE;&#x7F6E;&#x6392;&#x5E8F;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x5E38;&#x4E0E;SetLayer&#x914D;&#x5957;&#x4F7F;&#x7528;&#xFF0C;&#x5F53;&#x6709;&#x591A;&#x4E2A;&#x7269;&#x54C1;&#x91CD;&#x53E0;&#x65F6;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x6392;&#x5728;&#x524D;&#x9762;&#x3002;</td>
+<td>priority &#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6574;&#x6570;</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="soundemitter">SoundEmitter</h2>
+<p>&#x58F0;&#x97F3;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x64AD;&#x653E;&#x7269;&#x4F53;&#x672C;&#x8EAB;&#x62E5;&#x6709;&#x7684;&#x97F3;&#x6548;&#x8D44;&#x6E90;&#x3002;
+| fn                  | &#x7528;&#x9014;&#x8BF4;&#x660E;                  | &#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;                                         | &#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;                               |
+|---------------------|-----------------------|-------------------------------------------------------|-------------------------------------|
+| PlaySound           | &#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;                | path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;                                           | &#x65E0;                                   |
+| KillSound           | &#x505C;&#x6B62;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;              | sound &#x97F3;&#x6548;&#x540D;                                             | &#x65E0;                                   |
+| PlayingSound        | &#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;           | sound &#x97F3;&#x6548;&#x540D;                                             | is_playing &#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x8BE5;&#x97F3;&#x6548;&#xFF0C;&#x53D6;&#x503C;&#x4E3A;true &#x6216; false |
+| SetParameter        | &#x8BBE;&#x7F6E;&#x97F3;&#x6548;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x67D0;&#x4E9B;&#x97F3;&#x6548;&#x7684;&#x64AD;&#x653E;&#x6548;&#x679C; | sound &#x97F3;&#x6548;&#x540D;;param &#x53C2;&#x6570;&#x540D;;value &#x53C2;&#x6570;&#x503C;                         | &#x65E0;                                   |
+| SetVolume           | &#x8BBE;&#x7F6E;&#x97F3;&#x91CF;                  | sound &#x97F3;&#x6548;&#x540D;;volume &#x97F3;&#x91CF;                                   | &#x65E0;                                   |
+| PlaySoundWithParams | &#x5E26;&#x7740;&#x53C2;&#x6570;&#x64AD;&#x653E;&#x97F3;&#x6548;              | path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;,param_tbl &#x53C2;&#x6570;&#x8868;&#xFF0C;&#x5F62;&#x5982;{param_a=xxx,param_b=xxx} | &#x65E0;                                   |</p>
+<h2 id="transform">Transform</h2>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x5927;&#x5C0F;&#x3001;&#x65B9;&#x5411;&#x7B49;&#x3002;&#x5176;&#x4E2D;&#x300C;&#x5927;&#x5C0F;&#x300D;&#x4E0E;AnimState&#x6709;&#x533A;&#x522B;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;AnimState&#x8BBE;&#x7F6E;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x89C6;&#x89C9;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x800C;Transform&#x5219;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x7269;&#x4F53;&#x7684;&#x78B0;&#x649E;&#x7B49;&#x76F8;&#x5173;&#x7269;&#x7406;&#x6548;&#x679C;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SetPosition</td>
+<td>&#x8BBE;&#x7F6E;&#x7269;&#x4F53;&#x7684;&#x4E16;&#x754C;&#x5750;&#x6807;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x7269;&#x4F53;&#x77AC;&#x79FB;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</td>
+<td>x,y,z &#x7269;&#x4F53;&#x7684;&#x4E09;&#x7EF4;&#x5750;&#x6807;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetWorldPosition</td>
+<td>&#x83B7;&#x53D6;&#x7269;&#x4F53;&#x7684;&#x5F53;&#x524D;&#x4E16;&#x754C;&#x5750;&#x6807;</td>
+<td>&#x65E0;</td>
+<td>x,y,z &#x7269;&#x4F53;&#x7684;&#x4E09;&#x7EF4;&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>SetScale</td>
+<td>&#x8BBE;&#x7F6E;&#x7269;&#x4F53;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;</td>
+<td>x,y,z &#x7269;&#x4F53;&#x5728;&#x4E09;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetScale</td>
+<td>&#x83B7;&#x53D6;&#x7269;&#x4F53;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;</td>
+<td>&#x65E0;</td>
+<td>x,y,z &#x7269;&#x4F53;&#x5728;&#x4E09;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;</td>
+</tr>
+<tr>
+<td>SetFromProxy</td>
+<td>&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x731C;&#x6D4B;&#x662F;&#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x53C2;&#x6570;&#x540C;&#x6B65;&#x4E8E;proxy&#xFF0C;&#x4E00;&#x822C;&#x5E38;&#x89C1;&#x4E8E;&#x5404;&#x79CD;&#x7279;&#x6548;&#xFF0C;&#x540C;&#x6B65;&#x4E8E;&#x5BF9;&#x5E94;&#x7684;&#x9644;&#x52A0;&#x7269;&#x4E0A;</td>
+<td>proxy_guid &#x5E38;&#x7528;&#x7684;&#x5199;&#x6CD5;&#x662F;&#x4F20;&#x5165;proxy&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x53D6;proxy.GUID</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetRotation</td>
+<td>&#x8BBE;&#x7F6E;&#x7269;&#x4F53;&#x7684;&#x671D;&#x5411;</td>
+<td>degree &#x671D;&#x5411;&#x89D2;&#x5EA6;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;[0,360]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetRotation</td>
+<td>&#x83B7;&#x53D6;&#x7269;&#x4F53;&#x7684;&#x671D;&#x5411;</td>
+<td>&#x65E0;</td>
+<td>degree &#x671D;&#x5411;&#x89D2;&#x5EA6;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;[0,360]</td>
+</tr>
+<tr>
+<td>SetFourFaced</td>
+<td>&#x8BBE;&#x7F6E;&#x7269;&#x4F53;&#x6709;&#x56DB;&#x4E2A;&#x9762;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x7269;&#x4F53;&#x5728;&#x76F8;&#x5E94;&#x671D;&#x5411;&#x65F6;&#x5C55;&#x793A;&#x7684;&#x5F62;&#x6001;&#x3002;&#x56DB;&#x4E2A;&#x9762;&#x5C31;&#x662F;&#x6BCF;&#x4E2A;&#x9762;&#x5360;90&#x5EA6;&#x3002;&#x5176;&#x5B83;&#x7C7B;&#x4F3C;&#x7684;&#x8FD8;&#x6709;SetNoFaced(1&#x9762;),SetTwoFaced(2&#x9762;),SetSixFaced(6&#x9762;),SetEightFaced(8&#x9762;)</td>
+<td>&#x65E0;</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physics">Physics</h2>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x7269;&#x7406;&#x8FD0;&#x52A8;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5305;&#x62EC;&#x7269;&#x7406;&#x53C2;&#x6570;&#xFF0C;&#x79FB;&#x52A8;&#xFF0C;&#x78B0;&#x649E;&#x7B49;&#x3002;
+&#x901A;&#x5E38;&#x800C;&#x8A00;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x81EA;&#x5DF1;&#x914D;&#x7F6E;&#x7269;&#x7406;&#x8FD0;&#x52A8;&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x9519;&#x8BEF;&#x53C2;&#x6570;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x4E00;&#x4E9B;&#x8BE1;&#x5F02;&#x7684;&#x7269;&#x7406;&#x6548;&#x679C;&#x3002;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;&#x9884;&#x8BBE;&#x51FD;&#x6570;&#x6765;&#x4E00;&#x952E;&#x914D;&#x7F6E;&#xFF0C;&#x4F4D;&#x4E8E;<code>standardcomponents</code></p>
+<p>RemovePhysicsColliders
+<strong>&#x76F8;&#x5173;&#x51FD;&#x6570;&#x5F85;&#x5B9A;&#xFF0C;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#xFF0C;&#x7ED3;&#x5408;&#x8BBE;&#x7F6E;&#x5404;&#x79CD;&#x7269;&#x7406;&#x914D;&#x7F6E;&#x7684;&#x811A;&#x672C;&#x6765;&#x67E5;&#x770B;</strong>
+MakeCharacterPhysics &#x7B49;</p>
+<h2 id="minimapentity">MiniMapEntity</h2>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x5C0F;&#x5730;&#x56FE;&#x7684;&#x56FE;&#x6807;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SetIcon</td>
+<td>&#x8BBE;&#x7F6E;&#x5C0F;&#x5730;&#x56FE;&#x56FE;&#x6807;</td>
+<td>image &#x56FE;&#x6807;&#x6587;&#x4EF6;&#x540D;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetPriority</td>
+<td>&#x8BBE;&#x7F6E;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x5728;&#x66F4;&#x4E0A;&#x9762;</td>
+<td>priority &#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6574;&#x6570;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetEnabled</td>
+<td>&#x8BBE;&#x7F6E;&#x5C0F;&#x5730;&#x56FE;&#x56FE;&#x6807;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x7528;,&#x53D6;&#x503C;ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetCanUseCache</td>
+<td>&#x5F85;&#x5B9A;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x4F7F;&#x7528;&#x7F13;&#x5B58;</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x7528;,&#x53D6;&#x503C;ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetDrawOverFogOfWar</td>
+<td>&#x5F85;&#x5B9A;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x65E0;&#x89C6;&#x8FF7;&#x96FE;&#x663E;&#x793A;&#x56FE;&#x6807;</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x7528;,&#x53D6;&#x503C;ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetIsFogRevealer</td>
+<td>&#x5F85;&#x5B9A;&#xFF0C;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x8FF7;&#x96FE;</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x7528;,&#x53D6;&#x503C;ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dynamicshadow">DynamicShadow</h2>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x3002;&#x6BCF;&#x4E2A;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x90FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x751A;&#x81F3;&#x540C;&#x4E00;&#x4E2A;&#x89D2;&#x8272;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x88C5;&#x5907;&#x4E0B;&#x4E5F;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&#x3002;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x88C5;&#x5907;&#x4E0D;&#x540C;&#x7684;&#x96E8;&#x4F1E;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x5F71;&#x5B50;&#x7684;&#x53D8;&#x5316;&#x3002;
+| fn      | &#x7528;&#x9014;&#x8BF4;&#x660E;    | &#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;                              | &#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E; |
+|---------|---------|--------------------------------------------|-------|
+| SetSize | &#x8BBE;&#x7F6E;&#x5F71;&#x5B50;&#x5927;&#x5C0F;  | length_scale &#x957F;&#x5EA6;&#x7F29;&#x653E;;width_scale &#x5BBD;&#x5EA6;&#x7F29;&#x653E; &#x3002;&#x53D6;&#x503C;&#x586B;&#x5C0F;&#x6570;&#x3002; | &#x65E0;     |
+| Enable  | &#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6709;&#x5F71;&#x5B50; | &#x53D6;&#x503C; ture/false                              | &#x65E0;     |</p>
+<h2 id="light">Light</h2>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x5149;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x4E2A;&#x7269;&#x4F53;&#x6DFB;&#x52A0;&#x5149;&#x6E90;&#x5E76;&#x8C03;&#x6574;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x5982;&#x53D1;&#x5149;&#x534A;&#x5F84;&#x3001;&#x5F3A;&#x5EA6;&#x3001;&#x8870;&#x51CF;&#x5EA6;&#x7B49;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable</td>
+<td>&#x8BBE;&#x7F6E;&#x5149;&#x6E90;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
+<td>&#x53D6;&#x503C; ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>IsEnabled</td>
+<td>&#x5224;&#x65AD;&#x5149;&#x6E90;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
+<td>&#x65E0;</td>
+<td>&#x53D6;&#x503C; ture/false</td>
+</tr>
+<tr>
+<td>SetRadius</td>
+<td>&#x8BBE;&#x7F6E;&#x5149;&#x6E90;&#x534A;&#x5F84;&#x3002;&#x5728;&#x5F88;&#x591A;&#x6D89;&#x53CA;&#x5149;&#x7684;&#x8BA1;&#x7B97;&#x4E2D;&#x90FD;&#x4F1A;&#x7528;&#x5230;&#x5149;&#x6E90;&#x534A;&#x5F84;&#xFF0C;&#x6BD4;&#x5982;&#x4F5C;&#x7269;&#x751F;&#x957F;&#x9700;&#x8981;&#x5149;&#x6E90;&#xFF0C;&#x8FD9;&#x4E2A;&#x5149;&#x6E90;&#x662F;&#x6709;&#x8DDD;&#x79BB;&#x8981;&#x6C42;&#x7684;&#xFF0C;&#x592A;&#x8FDC;&#x7684;&#x5C31;&#x4E0D;&#x7B97;&#x3002;</td>
+<td>radius &#x534A;&#x5F84;&#x8DDD;&#x79BB;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetCalculatedRadius</td>
+<td>&#x83B7;&#x53D6;&#x5149;&#x6E90;&#x534A;&#x5F84;</td>
+<td>&#x65E0;</td>
+<td>radius &#x534A;&#x5F84;&#x8DDD;&#x79BB;</td>
+</tr>
+<tr>
+<td>SetIntensity</td>
+<td>&#x8BBE;&#x7F6E;&#x5149;&#x6E90;&#x4EAE;&#x5EA6;</td>
+<td>intensity &#x4EAE;&#x5EA6;,&#x53D6;&#x503C;[0,1]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetFalloff</td>
+<td>&#x8BBE;&#x7F6E;&#x8870;&#x51CF;&#x5F3A;&#x5EA6;</td>
+<td>falloff &#x8870;&#x51CF;&#x5F3A;&#x5EA6;,&#x53D6;&#x503C;[0,1]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetColour</td>
+<td>&#x8BBE;&#x7F6E;&#x5149;&#x6E90;&#x989C;&#x8272;</td>
+<td>r,g,b &#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7EA2;&#xFF0C;&#x7EFF;&#xFF0C;&#x84DD;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x53D6;&#x503C;[0,1]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetColour</td>
+<td>&#x83B7;&#x53D6;&#x5149;&#x6E90;&#x989C;&#x8272;</td>
+<td>&#x65E0;</td>
+<td>r,g,b &#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7EA2;&#xFF0C;&#x7EFF;&#xFF0C;&#x84DD;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x53D6;&#x503C;[0,1]</td>
+</tr>
+<tr>
+<td>EnableClientModulation</td>
+<td>&#x5F85;&#x5B9A;&#xFF0C;&#x672A;&#x786E;&#x8BA4;&#x7528;&#x9014;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="lightwatcher">LightWatcher</h2>
+<p>&#x5149;&#x7167;&#x76D1;&#x89C6;&#x5668;&#xFF0C;&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x76D1;&#x63A7;&#x5149;&#x7167;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#xFF0C;&#x5F88;&#x591A;&#x52A8;&#x690D;&#x7269;&#x7684;&#x6D3B;&#x52A8;&#x90FD;&#x548C;&#x5149;&#x7167;&#x6709;&#x5173;&#x3002;&#x4F8B;&#x5982;&#x8718;&#x86DB;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x53EA;&#x5728;&#x665A;&#x4E0A;&#x548C;&#x9ED1;&#x6697;&#x73AF;&#x5883;&#x4E0B;&#x6D3B;&#x52A8;&#xFF0C;&#x732A;&#x4EBA;&#x5219;&#x5728;&#x767D;&#x5929;&#x6216;&#x8005;&#x660E;&#x4EAE;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x6D3B;&#x52A8;&#x3002;&#x5982;&#x4F55;&#x5224;&#x65AD;&#x9ED1;&#x6697;&#x548C;&#x660E;&#x4EAE;&#xFF0C;&#x5C31;&#x662F;&#x5149;&#x7167;&#x76D1;&#x89C6;&#x5668;&#x6765;&#x505A;&#x7684;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IsInLight</td>
+<td>&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x660E;&#x4EAE;&#x73AF;&#x5883;</td>
+<td>&#x65E0;</td>
+<td>&#x53D6;&#x503C; ture/false</td>
+</tr>
+<tr>
+<td>SetLightThresh</td>
+<td>&#x8BBE;&#x7F6E;&#x660E;&#x4EAE;&#x9608;&#x503C;</td>
+<td>thresh &#x9608;&#x503C;&#xFF0C;&#x53D6;&#x503C;[0,1]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetDarkThresh</td>
+<td>&#x8BBE;&#x7F6E;&#x9ED1;&#x6697;&#x9608;&#x503C;</td>
+<td>thresh &#x9608;&#x503C;&#xFF0C;&#x53D6;&#x503C;[0,1]</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>GetTimeInLight</td>
+<td>&#x83B7;&#x53D6;&#x5149;&#x7167;&#x65F6;&#x957F;</td>
+<td>&#x65E0;</td>
+<td>time &#x5149;&#x7167;&#x65F6;&#x957F;</td>
+</tr>
+<tr>
+<td>GetLightAngle</td>
+<td>&#x83B7;&#x53D6;&#x5149;&#x7167;&#x89D2;&#x5EA6;</td>
+<td>&#x65E0;</td>
+<td>angle &#x5149;&#x7167;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td>GetLightValue</td>
+<td>&#x83B7;&#x53D6;&#x5149;&#x7167;&#x503C;</td>
+<td>&#x65E0;</td>
+<td>light_val &#x5149;&#x7167;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="follower">Follower</h2>
+<p>&#x5728;component&#x4E2D;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x540C;&#x540D;&#x7684;follower&#xFF0C;&#x4F46;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;&#x7684;follower&#x662F;&#x66F4;&#x5E95;&#x5C42;&#x7684;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x4E00;&#x4E9B;&#x7279;&#x6548;&#x8DDF;&#x968F;&#x7684;&#x5904;&#x7406;&#x3002;&#x800C;component&#x7684;follower&#x66F4;&#x4FA7;&#x91CD;&#x4E8E;&#x4E00;&#x4E2A;&#x751F;&#x7269;&#x8DDF;&#x968F;&#x53E6;&#x4E00;&#x4E2A;&#x751F;&#x7269;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FollowSymbol</td>
+<td>&#x8DDF;&#x968F;&#x6807;&#x8BB0;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x7279;&#x6548;&#x8DDF;&#x968F;&#x4E8E;&#x67D0;&#x4E2A;&#x7269;&#x4F53;&#x3002;</td>
+<td>target_guid &#x8DDF;&#x968F;&#x76EE;&#x6807;&#x7684;guid;symbol &#x8DDF;&#x968F;&#x7684;&#x6807;&#x8BB0;&#x70B9;; x,y,z &#x5728;&#x4E09;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x504F;&#x79FB;&#x91CF;</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network">Network</h2>
+<p>&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#xFF0C;&#x672A;&#x80FD;&#x6839;&#x636E;&#x4EE3;&#x7801;&#x76F4;&#x63A5;&#x770B;&#x51FA;&#x7528;&#x9014;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x8FDB;&#x884C;&#x8F83;&#x591A;&#x7684;&#x5B9E;&#x9A8C;&#x624D;&#x80FD;&#x786E;&#x5B9A;&#xFF0C;&#x6682;&#x65F6;&#x7565;&#x8FC7;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../main/c5_brain.html#结语" class="navigation navigation-prev " aria-label="Previous page: 结语">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="component.html" class="navigation navigation-next " aria-label="Next page: 常见Component">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"系统组件","level":"2.1","depth":1,"next":{"title":"常见Component","level":"2.2","depth":1,"path":"reference/component.md","ref":"reference/component.md","articles":[]},"previous":{"title":"结语","level":"1.6.6","depth":2,"anchor":"#结语","path":"main/c5_brain.md","ref":"main/c5_brain.md#结语","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Don't Starve,饥荒","author":"LongFei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"源码看《饥荒》","language":"zh-hans","gitbook":"*","description":"从源码层面解读《饥荒》游戏"},"file":{"path":"reference/system.md","mtime":"2022-03-12T01:23:42.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T02:59:21.410Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

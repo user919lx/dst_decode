@@ -1,0 +1,803 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Brain：动作节点 · 源码看《饥荒》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LongFei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="brain_dec.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html">
+            
+                    
+                    第一章 世界的构成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#万物起源">
+            
+                    
+                    万物起源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#灵魂">
+            
+                    
+                    灵魂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#血肉">
+            
+                    
+                    血肉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#动起来">
+            
+                    
+                    动起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#AI决策">
+            
+                    
+                    AI决策
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#世界地图">
+            
+                    
+                    世界地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../main/c1_the_world.html">
+            
+                <a href="../main/c1_the_world.html#交互界面">
+            
+                    
+                    交互界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html">
+            
+                    
+                    第二章 entity与prefab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#prefab的定义">
+            
+                    
+                    prefab的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#初始化函数fn">
+            
+                    
+                    初始化函数fn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../main/c2_entity_and_prefab.html">
+            
+                <a href="../main/c2_entity_and_prefab.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html">
+            
+                    
+                    第三章 组件与动作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#定义">
+            
+                    
+                    定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#replica">
+            
+                    
+                    replica
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../main/c3_component_and_action.html">
+            
+                <a href="../main/c3_component_and_action.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html">
+            
+                    
+                    第四章 动起来 - 状态图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#StateGraph概览">
+            
+                    
+                    StateGraph概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#State的构造">
+            
+                    
+                    State的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#Handler的构造">
+            
+                    
+                    Handler的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../main/c4_stategraph.html">
+            
+                <a href="../main/c4_stategraph.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html">
+            
+                    
+                    第五章 思想 - 让生物拥有智慧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#概览">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#状态">
+            
+                    
+                    状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#节点">
+            
+                    
+                    节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#游戏实现">
+            
+                    
+                    游戏实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../main/c5_brain.html">
+            
+                <a href="../main/c5_brain.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">参考手册</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="system.html">
+            
+                <a href="system.html">
+            
+                    
+                    系统组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="component.html">
+            
+                <a href="component.html">
+            
+                    
+                    常见Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="brain_dec.html">
+            
+                <a href="brain_dec.html">
+            
+                    
+                    Brain：修饰和组合节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="brain_action.html">
+            
+                <a href="brain_action.html">
+            
+                    
+                    Brain：动作节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Brain：动作节点</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="brain&#xFF1A;&#x52A8;&#x4F5C;&#x8282;&#x70B9;">Brain&#xFF1A;&#x52A8;&#x4F5C;&#x8282;&#x70B9;</h1>
+<p>&#x52A8;&#x4F5C;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x6E38;&#x620F;&#x903B;&#x8F91;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x90FD;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x9664;&#x4E86;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x8FD9;&#x4E9B;&#xFF0C;&#x6709;&#x7279;&#x6B8A;&#x903B;&#x8F91;&#x9700;&#x6C42;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x81EA;&#x5DF1;&#x81EA;&#x5B9A;&#x4E49;&#x3002;</p>
+<h2 id="attackwall">AttackWall</h2>
+<p>&#x653B;&#x51FB;&#x56F4;&#x5899;&#xFF0C;&#x6784;&#x9020;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;inst&#xFF0C;&#x5373;&#x8981;&#x5B9E;&#x65BD;&#x52A8;&#x4F5C;&#x7684;&#x89D2;&#x8272;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x8BA9;&#x89D2;&#x8272;&#x5728;&#x4E00;&#x7CFB;&#x5217;&#x5224;&#x65AD;&#x4E4B;&#x540E;&#x5C1D;&#x8BD5;&#x653B;&#x51FB;&#x56F4;&#x5899;&#x3002;</p>
+<h2 id="avoidlight">AvoidLight</h2>
+<p>&#x907F;&#x5149;&#xFF0C;&#x6784;&#x9020;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;inst&#xFF0C;&#x5373;&#x8981;&#x5B9E;&#x65BD;&#x52A8;&#x4F5C;&#x7684;&#x89D2;&#x8272;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x8BA9;&#x89D2;&#x8272;&#x5C1D;&#x8BD5;&#x8EB2;&#x907F;&#x5149;&#x7EBF;&#xFF0C;&#x5E76;&#x672A;&#x5B9E;&#x9645;&#x7528;&#x5728;&#x4EFB;&#x4F55;brain&#x4E2D;&#xFF0C;&#x4F46;&#x5728;spier&#x7684;brain&#x4E2D;&#x6709;require&#x3002;</p>
+<h2 id="beargeroffscreen">BeargerOffScreen</h2>
+<p>&#x79CB;&#x5B63;BOSS&#x718A;&#x5927;&#x5728;&#x79BB;&#x5F00;&#x5C4F;&#x5E55;&#x540E;&#x7684;&#x884C;&#x4E3A;&#x5B9A;&#x4E49;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x4E13;&#x4E3A;&#x718A;&#x5927;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x5728;&#x65E9;&#x671F;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x6709;&#x4F7F;&#x7528;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x5E9F;&#x5F03;&#xFF0C;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x65E0;&#x9700;&#x4E86;&#x89E3;</p>
+<h2 id="chaseandattack">ChaseAndAttack</h2>
+<p>&#x8FFD;&#x9010;&#x5E76;&#x653B;&#x51FB;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53C2;&#x6570;inst, max_chase_time, give_up_dist, max_attacks, findnewtargetfn, walk&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#x6267;&#x884C;&#x52A8;&#x4F5C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C; &#x6700;&#x5927;&#x8FFD;&#x51FB;&#x65F6;&#x95F4;&#xFF0C;&#x6700;&#x5927;&#x8FFD;&#x51FB;&#x8DDD;&#x79BB;&#xFF0C;&#x6700;&#x5927;&#x653B;&#x51FB;&#x6B21;&#x6570;&#xFF0C;&#x5BFB;&#x627E;&#x65B0;&#x76EE;&#x6807;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x5426;&#x8D70;&#x8DEF;&#xFF08;&#x5426;&#x5219;&#x662F;&#x8DD1;&#x6B65;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x8BA9;&#x751F;&#x7269;&#x5728;&#x9650;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x5C1D;&#x8BD5;&#x8FFD;&#x9010;&#x76EE;&#x6807;&#x5E76;&#x653B;&#x51FB;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x9ED8;&#x8BA4;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x4E2D;&#xFF0C;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x5BFB;&#x627E;&#x653B;&#x51FB;&#x76EE;&#x6807;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x8981;&#x4E48;&#x5B9A;&#x4E49;findnewtargetfn&#xFF0C;&#x8981;&#x4E48;&#x5C31;&#x901A;&#x8FC7;&#x5176;&#x5B83;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4E3A;&#x751F;&#x7269;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x653B;&#x51FB;&#x76EE;&#x6807;&#x3002;&#x5728;&#x5B98;&#x65B9;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5927;&#x591A;&#x6570;ChaseAndAttack&#x8282;&#x70B9;&#x90FD;&#x6CA1;&#x6709;findnewtargetfn&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x5176;&#x5B83;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x76EE;&#x6807;&#x8BBE;&#x7F6E;&#x7684;&#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5C31;&#x662F;&#x4FDD;&#x6301;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#xFF1A;&#x751F;&#x7269;&#x88AB;&#x653B;&#x51FB;&#x540E;&#xFF0C;&#x4F1A;&#x628A;&#x653B;&#x51FB;&#x8005;&#x8BBE;&#x7F6E;&#x4E3A;&#x653B;&#x51FB;&#x76EE;&#x6807;&#x3002;</p>
+<h2 id="chaseandattackandavoid">ChaseAndAttackAndAvoid</h2>
+<p>&#x8FFD;&#x9010;&#x3001;&#x653B;&#x51FB;&#x5E76;&#x8EB2;&#x907F;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53C2;&#x6570;inst, findavoidanceobjectfn, avoid_dist, max_chase_time, give_up_dist, max_attacks, findnewtargetfn, walk&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x57FA;&#x672C;&#x548C;ChaseAndAttack&#x7C7B;&#x4F3C;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x589E;&#x52A0;&#x4E86;&#x4E24;&#x4E2A;&#x53C2;&#x6570;findavoidanceobjectfn, avoid_dist&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x5728;&#x8FFD;&#x9010;&#x653B;&#x51FB;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x8BD5;&#x56FE;&#x8EB2;&#x907F;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x3002;&#x6BD4;&#x5982;&#x732A;&#x4EBA;&#x6218;&#x58EB;&#xFF0C;&#x5728;&#x653B;&#x51FB;&#x65F6;&#x56DE;&#x8C03;&#x6574;&#x81EA;&#x5DF1;&#x7684;&#x653B;&#x51FB;&#x4F4D;&#x7F6E;&#xFF0C;&#x907F;&#x514D;&#x8FC7;&#x4E8E;&#x9760;&#x8FD1;&#x732A;&#x738B;&#x3002;findavoidanceobjectfn, avoid_dist&#x5206;&#x522B;&#x8868;&#x793A;&#x627E;&#x5230;&#x8EB2;&#x907F;&#x76EE;&#x6807;&#x7684;&#x51FD;&#x6570;&#x548C;&#x8EB2;&#x907F;&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<h2 id="chaseandram">ChaseAndRam</h2>
+<p>&#x8FFD;&#x9010;&#x5E76;&#x51B2;&#x649E;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;inst, max_chase_time, give_up_dist, max_charge_dist, max_attacks&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x6700;&#x5927;&#x8FFD;&#x9010;&#x65F6;&#x95F4;&#xFF0C;&#x6700;&#x5927;&#x8FFD;&#x9010;&#x8DDD;&#x79BB;&#xFF0C;&#x6700;&#x5927;&#x51B2;&#x649E;&#x8DDD;&#x79BB;&#xFF0C;&#x6700;&#x5927;&#x653B;&#x51FB;&#x6B21;&#x6570;&#x3002;&#x5982;&#x679C;&#x76EE;&#x6807;&#x4E0E;&#x81EA;&#x8EAB;&#x7684;&#x8DDD;&#x79BB;&#x8D85;&#x8FC7;&#x6700;&#x5927;&#x51B2;&#x649E;&#x8DDD;&#x79BB;&#xFF0C;&#x5C31;&#x65E0;&#x6CD5;&#x5B9E;&#x884C;&#x51B2;&#x649E;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7528;&#x4E8E;&#x79CB;&#x5B63;BOSS&#xFF0C;&#x5730;&#x4E0B;&#x7684;&#x7280;&#x725B;BOSS&#x8FD9;&#x4E9B;&#x5177;&#x6709;&#x51B2;&#x649E;&#x80FD;&#x529B;&#x7684;BOSS&#x4E0A;&#x3002;</p>
+<h2 id="controlminions">ControlMinions</h2>
+<p>&#x63A7;&#x5236;&#x5B50;&#x4F53;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4EC5;&#x5728;&#x98DF;&#x4EBA;&#x82B1;&#x4E0A;&#x4F7F;&#x7528;&#xFF0C;&#x63A7;&#x5236;&#x98DF;&#x4EBA;&#x82B1;&#x7684;&#x5B50;&#x4F53;&#x3002;&#x5B83;&#x4F1A;&#x5728;&#x5B50;&#x4F53;&#x7684;&#x63A7;&#x5236;&#x8303;&#x56F4;&#x5185;&#x8FDB;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x884C;&#x52A8;&#xFF0C;&#x6BD4;&#x5982;&#x6361;&#x8D77;&#x5730;&#x4E0A;&#x7684;&#x4E1C;&#x897F;&#x6216;&#x8005;&#x6536;&#x83B7;&#x519C;&#x573A;&#x7684;&#x98DF;&#x7269;&#x7B49;&#x3002;</p>
+<h2 id="doaction">DoAction</h2>
+<p>&#x901A;&#x7528;&#x7684;&#x52A8;&#x4F5C;&#x8282;&#x70B9;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;inst, getactionfn, name, run, timeout&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x83B7;&#x53D6;&#x52A8;&#x4F5C;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x8FD4;&#x56DE;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#xFF09;&#xFF0C;&#x662F;&#x5426;&#x5728;&#x6267;&#x884C;&#x52A8;&#x4F5C;&#x65F6;&#x8DD1;&#x8D77;&#x6765;&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;getactionfn&#x6765;&#x8BA9;&#x751F;&#x7269;&#x5728;&#x6EE1;&#x8DB3;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#x7279;&#x5B9A;&#x52A8;&#x4F5C;&#xFF0C;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5C31;&#x662F;&#x5728;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x4E0B;&#x6267;&#x884C;&#x56DE;&#x5BB6;&#x7684;&#x52A8;&#x4F5C;&#x3002;</p>
+<h2 id="faceentity">FaceEntity</h2>
+<p>&#x9762;&#x5411;&#x67D0;&#x4E2A;&#x5B9E;&#x4F53;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;inst, getfn, keepfn, timeout&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x641C;&#x5BFB;&#x76EE;&#x6807;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4FDD;&#x7559;&#x76EE;&#x6807;&#x7684;&#x5224;&#x65AD;&#x51FD;&#x6570;&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x8BA9;&#x751F;&#x7269;&#x9762;&#x5411;&#x7279;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4ED4;&#x7EC6;&#x89C2;&#x5BDF;&#x8DDF;&#x968F;&#x4F60;&#x7684;&#x751F;&#x7269;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x4EEC;&#x5728;&#x9759;&#x6B62;&#x65F6;&#x603B;&#x662F;&#x9762;&#x5411;&#x4F60;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;FaceEntity&#x5728;&#x53D1;&#x6325;&#x4F5C;&#x7528;&#x3002;</p>
+<h2 id="findclosest">FindClosest</h2>
+<p>&#x5BFB;&#x627E;&#x6700;&#x8FD1;&#x7684;&#x5355;&#x4F4D;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;inst, see_dist, safe_dist, tags, exclude_tags, one_of_tags&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x641C;&#x5BFB;&#x8DDD;&#x79BB;&#xFF0C;&#x5B89;&#x5168;&#x8DDD;&#x79BB;&#xFF08;&#x5F53;&#x641C;&#x5BFB;&#x5230;&#x76EE;&#x6807;&#x540E;&#xFF0C;&#x4F1A;&#x5C1D;&#x8BD5;&#x79FB;&#x52A8;&#x5230;&#x5B89;&#x5168;&#x8DDD;&#x79BB;&#x5185;&#xFF09;&#xFF0C;&#x641C;&#x5BFB;&#x6807;&#x7B7E;&#xFF08;&#x641C;&#x5BFB;&#x5355;&#x4F4D;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x5168;&#x90E8;&#x7684;&#x6807;&#x7B7E;&#xFF09;&#xFF0C;&#x6392;&#x9664;&#x6807;&#x7B7E;&#xFF08;&#x641C;&#x5BFB;&#x5355;&#x4F4D;&#x4E0D;&#x80FD;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF09;&#xFF0C;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;&#x6807;&#x7B7E;&#xFF08;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x65E0;&#x89C6;&#x524D;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53EA;&#x8981;&#x5355;&#x4F4D;&#x5177;&#x6709;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x5C31;&#x7B97;&#x662F;&#x5339;&#x914D;&#x4E86;&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5BFB;&#x627E;&#x7B26;&#x5408;&#x6807;&#x7B7E;&#x8981;&#x6C42;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x5E76;&#x4E14;&#x81EA;&#x52A8;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x9644;&#x8FD1;&#x3002;</p>
+<h2 id="findflower">FindFlower</h2>
+<p>&#x4ECE;&#x540D;&#x5B57;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5BFB;&#x627E;&#x82B1;&#xFF0C;&#x7528;&#x4E8E;&#x871C;&#x8702;&#x548C;&#x8774;&#x8776;&#x3002;</p>
+<h2 id="findlight">FindLight</h2>
+<p>&#x5BFB;&#x627E;&#x5149;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;&#x662F;inst, see_dist, safe_dist&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x641C;&#x5BFB;&#x8DDD;&#x79BB;&#xFF0C;&#x5B89;&#x5168;&#x8DDD;&#x79BB;&#x3002;&#x53C2;&#x6570;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x540C;FindClosest&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x5BFB;&#x627E;&#x5149;&#x6E90;&#xFF0C;&#x7528;&#x4E8E;&#x732A;&#x4EBA;&#x3002;</p>
+<h2 id="follow">Follow</h2>
+<p>&#x8DDF;&#x968F;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x4EE4;&#x751F;&#x7269;&#x8DDF;&#x968F;&#x76EE;&#x6807;&#x79FB;&#x52A8;&#x3002;</p>
+<p>&#x8282;&#x70B9;&#x53C2;&#x6570;&#x5982;&#x4E0B;</p>
+<ul>
+<li>inst: &#x751F;&#x7269;&#x81EA;&#x8EAB;</li>
+<li>target: &#x641C;&#x5BFB;&#x8DDF;&#x968F;&#x76EE;&#x6807;&#x7684;&#x51FD;&#x6570;</li>
+<li>min_dist: &#x6700;&#x5C0F;&#x8DDD;&#x79BB;&#xFF08;&#x76EE;&#x6807;&#x4E0E;&#x751F;&#x7269;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x4F4E;&#x4E8E;&#x6B64;&#x8DDD;&#x79BB;&#xFF0C;&#x751F;&#x7269;&#x4F1A;&#x8FDC;&#x79BB;&#x76EE;&#x6807;&#xFF0C;&#x76F4;&#x5230;&#x8DDD;&#x79BB;&#x5927;&#x4E8E;target_dist&#xFF09;</li>
+<li>target_dist: &#x76EE;&#x6807;&#x8DDD;&#x79BB;&#xFF08;&#x6700;&#x5408;&#x9002;&#x7684;&#x8DDD;&#x79BB;&#xFF09;</li>
+<li>max_dist: &#x6700;&#x5927;&#x8DDD;&#x79BB;&#xFF08;&#x76EE;&#x6807;&#x4E0E;&#x751F;&#x7269;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x9AD8;&#x4E8E;&#x6B64;&#x8DDD;&#x79BB;&#xFF0C;&#x751F;&#x7269;&#x4F1A;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#xFF0C;&#x76F4;&#x5230;&#x8DDD;&#x79BB;&#x5C0F;&#x4E8E;target_dist&#xFF09;</li>
+<li>canrun: &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5954;&#x8DD1;&#xFF0C;&#x51B3;&#x5B9A;&#x79FB;&#x52A8;&#x65F6;&#x662F;&#x8D70;&#x8FD8;&#x662F;&#x8DD1;</li>
+</ul>
+<h2 id="leash">Leash</h2>
+<p>&#x7ED1;&#x5B9A;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x4EE4;&#x751F;&#x7269;&#x7ED1;&#x5B9A;&#x5728;&#x5B83;&#x7684;&#x9886;&#x5730;&#x4E0A;&#xFF0C;&#x4E0D;&#x4F1A;&#x5230;&#x5904;&#x4E71;&#x8DD1;&#x3002;&#x8282;&#x70B9;&#x53C2;&#x6570;inst, homelocation, max_dist, inner_return_dist, running&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x9886;&#x5730;&#x4F4D;&#x7F6E;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x5177;&#x4F53;&#x5750;&#x6807;&#x6216;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#xFF08;&#x8D85;&#x8FC7;&#x6B64;&#x8DDD;&#x79BB;&#x65F6;&#xFF0C;&#x751F;&#x7269;&#x4F1A;&#x505C;&#x6B62;&#x8D70;&#x52A8;&#xFF0C;&#x7ED3;&#x675F;&#x672C;&#x8F6E;&#x7684;&#x68C0;&#x6D4B;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x8DDD;&#x79BB;&#xFF08;&#x8D85;&#x8FC7;&#x6B64;&#x8DDD;&#x79BB;&#x65F6;&#xFF0C;&#x751F;&#x7269;&#x4F1A;&#x8BD5;&#x56FE;&#x8FD4;&#x56DE;&#x9886;&#x5730;&#x4F4D;&#x7F6E;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x65F6;&#x662F;&#x5426;&#x5954;&#x8DD1;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5B9E;&#x9645;&#x751F;&#x6548;&#x7684;&#x573A;&#x666F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x751F;&#x7269;&#x8FFD;&#x9010;&#x73A9;&#x5BB6;&#x8DD1;&#x51FA;&#x7684;&#x9886;&#x5730;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#x540E;&#xFF0C;&#x4F1A;&#x5148;&#x505C;&#x5728;&#x539F;&#x5730;&#xFF0C;&#x7136;&#x540E;&#x7B49;&#x5230;&#x4E0B;&#x4E00;&#x6B21;&#x68C0;&#x6D4B;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x539F;&#x672C;&#x4F4D;&#x7F6E;&#x3002;
+&#x5982;&#x679C;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x4ED4;&#x7EC6;&#x89C2;&#x5BDF;&#xFF0C;&#x5C31;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5F88;&#x591A;&#x6709;&#x9886;&#x5730;&#x7684;&#x751F;&#x7269;&#x6BD4;&#x5982;&#x9F99;&#x8747;&#xFF0C;&#x5728;&#x8FFD;&#x5F97;&#x592A;&#x8FDC;&#x65F6;&#x90FD;&#x4F1A;&#x5148;&#x505C;&#x4E00;&#x4E0B;&#x624D;&#x8FD4;&#x56DE;&#x3002;</p>
+<h2 id="leashandavoid">LeashAndAvoid</h2>
+<p>&#x7ED1;&#x5B9A;&#x5E76;&#x8EB2;&#x907F;&#x3002;&#x548C;ChaseAndAttackAndAvoid&#x7C7B;&#x4F3C;&#xFF0C;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E5F;&#x76F8;&#x4F3C;&#xFF0C;&#x5C31;&#x662F;&#x5728;Leash&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x4E86;&#x8EB2;&#x907F;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E;&#x732A;&#x4EBA;&#x5B88;&#x536B;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<h2 id="panic">Panic</h2>
+<p>&#x614C;&#x4E71;&#x3002;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x751F;&#x7269;&#x4F1A;&#x968F;&#x673A;&#x4E71;&#x7A9C;&#x3002;</p>
+<h2 id="panicandavoid">PanicAndAvoid</h2>
+<p>&#x614C;&#x4E71;&#x5E76;&#x8EB2;&#x907F;&#xFF0C;&#x548C;ChaseAndAttackAndAvoid&#x7C7B;&#x4F3C;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E;&#x732A;&#x4EBA;&#x5B88;&#x536B;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<h2 id="runaway">RunAway</h2>
+<p>&#x9003;&#x79BB;&#x3002;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x8BA9;&#x751F;&#x7269;&#x8FDC;&#x79BB;&#x7279;&#x5B9A;&#x76EE;&#x6807;&#xFF08;&#x8FD9;&#x91CC;&#x79F0;&#x4E3A;hunter&#xFF09;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x56DE;&#x5BB6;&#x3002;&#x5E38;&#x89C1;&#x4E8E;&#x5154;&#x5B50;&#x7B49;&#x751F;&#x7269;&#x3002;
+&#x8282;&#x70B9;&#x53C2;&#x6570;&#x5982;&#x4E0B;</p>
+<ul>
+<li>inst: &#x751F;&#x7269;&#x81EA;&#x8EAB;</li>
+<li>hunterparams: hunter&#x7684;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x5982;&#x641C;&#x5BFB;&#x51FD;&#x6570;&#x3001;&#x6807;&#x7B7E;&#x7B49;</li>
+<li>see_dist: &#x641C;&#x5BFB;&#x8DDD;&#x79BB;&#xFF0C;&#x5F53;&#x53D1;&#x73B0;hunter&#x5C0F;&#x4E8E;&#x6B64;&#x8DDD;&#x79BB;&#x65F6;&#xFF0C;&#x4F1A;&#x9003;&#x8DD1;</li>
+<li>safe_dist: &#x5B89;&#x5168;&#x8DDD;&#x79BB;&#xFF0C;&#x5F00;&#x59CB;&#x9003;&#x8DD1;&#x540E;&#xFF0C;&#x5F53;hunter&#x5927;&#x4E8E;&#x6B64;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x505C;&#x4E0B;</li>
+<li>fn: &#x989D;&#x5916;&#x7684;&#x5224;&#x5B9A;fn&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x9700;&#x8981;fn&#x8FD4;&#x56DE;true&#x624D;&#x4F1A;&#x9003;&#x8DD1;</li>
+<li>runhome: &#x662F;&#x5426;&#x8DD1;&#x56DE;&#x5BB6;&#x3002;</li>
+<li>fix_overhang: &#x5982;&#x679C;&#x53C2;&#x6570;&#x4E3A;true&#xFF0C;&#x5219;&#x4F1A;&#x68C0;&#x6D4B;&#x751F;&#x7269;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x6D77;&#x4E0A;&#x4F1A;&#x88AB;&#x79FB;&#x52A8;&#x5230;&#x9646;&#x5730;</li>
+</ul>
+<h2 id="stalkerchaseandattack">StalkerChaseAndAttack</h2>
+<p>&#x4E00;&#x4E2A;&#x8FC7;&#x671F;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x4F7F;&#x7528;ChaseAndAttackAndAvoid&#x66FF;&#x4EE3;</p>
+<h2 id="standandattack">StandAndAttack</h2>
+<p>&#x7AD9;&#x5728;&#x539F;&#x5730;&#x653B;&#x51FB;&#x3002;&#x90E8;&#x5206;&#x6CA1;&#x6709;&#x79FB;&#x52A8;&#x80FD;&#x529B;&#x7684;&#x751F;&#x7269;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x800C;&#x4E0D;&#x662F;ChaseAndAttack&#x3002;&#x53C2;&#x6570;inst, findnewtargetfn&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x548C;&#x5BFB;&#x627E;&#x65B0;&#x76EE;&#x6807;&#x7684;&#x51FD;&#x6570;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5728;&#x5B98;&#x65B9;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x8FC7;&#x3002;</p>
+<h2 id="standstill">StandStill</h2>
+<p>&#x7AD9;&#x5728;&#x539F;&#x5730;&#x4E0D;&#x52A8;&#x3002;&#x53C2;&#x6570;inst, startfn, keepfn&#xFF0C;&#x5206;&#x522B;&#x662F;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x5F00;&#x59CB;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x7684;&#x5224;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;&#x4FDD;&#x6301;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x7684;&#x5224;&#x5B9A;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x8282;&#x70B9;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x8BA9;&#x751F;&#x7269;&#x4FDD;&#x6301;&#x7AD9;&#x5728;&#x539F;&#x5730;&#x4E0D;&#x52A8;&#xFF0C;&#x5982;&#x679C;startfn&#x548C;keepfn&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x6761;&#x4EF6;&#xFF0C;&#x53EA;&#x8981;&#x884C;&#x4E3A;&#x6811;&#x8BBF;&#x95EE;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;&#x4FDD;&#x6301;&#x4E0D;&#x52A8;&#x3002;</p>
+<h2 id="useshield">UseShield</h2>
+<p>&#x4F7F;&#x7528;&#x62A4;&#x76FE;&#x9632;&#x5FA1;&#x3002;&#x77F3;&#x867E;&#x5728;&#x88AB;&#x653B;&#x51FB;&#x65F6;&#x7ECF;&#x5E38;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#x3002;&#x53C2;&#x6570;inst, damageforshield, shieldtime, hidefromprojectiles, hidewhenscared&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#x751F;&#x7269;&#x81EA;&#x8EAB;&#xFF0C;&#x5F53;&#x81EA;&#x8EAB;&#x6536;&#x5230;&#x4F24;&#x5BB3;&#x591A;&#x5C11;&#x65F6;&#x5F00;&#x542F;&#x62A4;&#x76FE;&#x9632;&#x5FA1;&#xFF0C;&#x9632;&#x5FA1;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x662F;&#x5426;&#x9632;&#x5FA1;&#x8FDC;&#x7A0B;&#x653B;&#x51FB;&#xFF0C;&#x5728;&#x53D7;&#x60CA;&#x65F6;&#x662F;&#x5426;&#x9632;&#x5FA1;&#x3002;
+&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5236;&#x5B9A;&#x4E86;&#x8FDB;&#x5165;&#x9632;&#x5FA1;&#x72B6;&#x6001;&#x548C;&#x9000;&#x51FA;&#x9632;&#x5FA1;&#x72B6;&#x6001;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5B9E;&#x8D28;&#x4E0A;&#x662F;&#x89E6;&#x53D1;&#x4E86;&#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5206;&#x522B;&#x662F;entershield&#x548C;exitshield&#x3002;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x6784;&#x5EFA;&#x4E00;&#x79CD;&#x5177;&#x5907;&#x9632;&#x5FA1;&#x59FF;&#x52BF;&#x7684;&#x751F;&#x7269;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x4E3A;&#x4E8B;&#x4EF6;entershield&#x548C;exitshield&#x8BBE;&#x7F6E;&#x76F8;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x5728;&#x5B98;&#x65B9;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x662F;&#x8BBE;&#x7F6E;&#x4E86;&#x76F8;&#x5E94;&#x7684;SG&#x7684;EventHandler)</p>
+<h2 id="wander">Wander</h2>
+<p>&#x6F2B;&#x6E38;&#x3002;&#x751F;&#x7269;&#x4F1A;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;&#x9644;&#x8FD1;&#x6E38;&#x8361;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>inst: &#x751F;&#x7269;&#x81EA;&#x8EAB;</li>
+<li>homelocation: &#x5BB6;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x5177;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</li>
+<li>max_dist: &#x6700;&#x5927;&#x6E38;&#x8361;&#x8DDD;&#x79BB;&#xFF0C;&#x751F;&#x7269;&#x4E0E;&#x5BB6;&#x7684;&#x8DDD;&#x79BB;&#x8D85;&#x8FC7;&#x6B64;&#x8DDD;&#x79BB;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5F80;&#x5BB6;&#x91CC;&#x8D70;</li>
+<li>times: &#x8FD9;&#x662F;&#x4E00;&#x4E2A;times&#xFF0C;&#x5206;&#x522B;&#x6709;minwalktime&#xFF0C;randwalktime&#xFF0C;minwaittime&#xFF0C;randwaittime&#x56DB;&#x4E2A;&#x5B50;key&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6F2B;&#x6E38;&#x4E2D;&#x95F4;&#x7684;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x586B;&#x5B8C;&#x5168;&#x90E8;&#x53C2;&#x6570;&#xFF0C;&#x90FD;&#x4E0D;&#x586B;&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x90FD;&#x6709;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;&#x76F8;&#x5E94;&#x65F6;&#x95F4;&#x3002;</li>
+<li>getdirectionFn: &#x83B7;&#x53D6;&#x8FD4;&#x56DE;&#x7684;&#x884C;&#x8D70;&#x89D2;&#x5EA6;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x968F;&#x673A;&#x53D6;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</li>
+<li>setdirectionFn: &#x4FEE;&#x6B63;&#x8FD4;&#x56DE;&#x884C;&#x8D70;&#x89D2;&#x5EA6;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x5C31;&#x7565;&#x8FC7;&#x3002;</li>
+<li>checkpointFn: &#x641C;&#x5BFB;&#x8DEF;&#x5F84;&#x7528;&#x7684;&#x68C0;&#x6D4B;&#x51FD;&#x6570;&#xFF0C;&#x6709;&#x65F6;&#x7528;&#x4E8E;&#x7ED5;&#x8FC7;&#x56F4;&#x5899;&#x3002;</li>
+</ul>
+<p>getdirectionFn&#xFF0C;setdirectionFn&#xFF0C;checkpointFn&#x8FD9;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;&#x4E2D;&#x8F83;&#x5C11;&#x7528;&#x5230;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="brain_dec.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Brain：修饰和组合节点">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Brain：动作节点","level":"2.4","depth":1,"previous":{"title":"Brain：修饰和组合节点","level":"2.3","depth":1,"path":"reference/brain_dec.md","ref":"reference/brain_dec.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Don't Starve,饥荒","author":"LongFei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"源码看《饥荒》","language":"zh-hans","gitbook":"*","description":"从源码层面解读《饥荒》游戏"},"file":{"path":"reference/brain_action.md","mtime":"2022-03-12T01:38:44.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T02:59:21.410Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
