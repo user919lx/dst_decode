@@ -1,0 +1,17 @@
+{
+    "title": "源码看《饥荒》",
+    "author": "LongFei",
+    "description": "从源码层面解读《饥荒》游戏",
+    "keywords": "Don't Starve,饥荒",
+    "language": "zh-hans",
+    "plugins": [
+        "expandable-chapters-small"
+    ],
+    "pluginsConfig": {
+        "page-toc": {
+          "selector": ".markdown-section h2, .markdown-section h3",
+          "position": "top",
+          "showByDefault": true
+        }
+      }
+}
