@@ -3,7 +3,7 @@
 数量太多，以后慢慢补充，如果有兴趣的同学，也可以私信我帮助完善。
 以下是我觉得使用比较广泛的component，其实有点基础的同学可以自己看代码来理解。
 
-- [ ] 移动：locomotor
+* [ ] 移动：locomotor
 * [ ] 移动：locomotor
 * [ ] 劳作：workable，pickable，finiteuses
 * [ ] 种植：growable
