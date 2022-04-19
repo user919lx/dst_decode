@@ -1,0 +1,740 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>序言 · 源码看《饥荒》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LongFei">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="main/c1_the_world.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html">
+            
+                    
+                    第一章 世界的构成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#万物起源">
+            
+                    
+                    万物起源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#灵魂">
+            
+                    
+                    灵魂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#血肉">
+            
+                    
+                    血肉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#动起来">
+            
+                    
+                    动起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#AI决策">
+            
+                    
+                    AI决策
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#世界地图">
+            
+                    
+                    世界地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="main/c1_the_world.html">
+            
+                <a href="main/c1_the_world.html#交互界面">
+            
+                    
+                    交互界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="main/c2_entity_and_prefab.html">
+            
+                <a href="main/c2_entity_and_prefab.html">
+            
+                    
+                    第二章 entity与prefab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="main/c2_entity_and_prefab.html">
+            
+                <a href="main/c2_entity_and_prefab.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="main/c2_entity_and_prefab.html">
+            
+                <a href="main/c2_entity_and_prefab.html#prefab的定义">
+            
+                    
+                    prefab的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="main/c2_entity_and_prefab.html">
+            
+                <a href="main/c2_entity_and_prefab.html#初始化函数fn">
+            
+                    
+                    初始化函数fn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="main/c2_entity_and_prefab.html">
+            
+                <a href="main/c2_entity_and_prefab.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="main/c3_component_and_action.html">
+            
+                <a href="main/c3_component_and_action.html">
+            
+                    
+                    第三章 组件与动作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="main/c3_component_and_action.html">
+            
+                <a href="main/c3_component_and_action.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="main/c3_component_and_action.html">
+            
+                <a href="main/c3_component_and_action.html#定义">
+            
+                    
+                    定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="main/c3_component_and_action.html">
+            
+                <a href="main/c3_component_and_action.html#replica">
+            
+                    
+                    replica
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="main/c3_component_and_action.html">
+            
+                <a href="main/c3_component_and_action.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html">
+            
+                    
+                    第四章 动起来 - 状态图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html#StateGraph概览">
+            
+                    
+                    StateGraph概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html#State的构造">
+            
+                    
+                    State的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html#Handler的构造">
+            
+                    
+                    Handler的构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="main/c4_stategraph.html">
+            
+                <a href="main/c4_stategraph.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html">
+            
+                    
+                    第五章 思想 - 让生物拥有智慧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#引言">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#概览">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#状态">
+            
+                    
+                    状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#节点">
+            
+                    
+                    节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#游戏实现">
+            
+                    
+                    游戏实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="main/c5_brain.html">
+            
+                <a href="main/c5_brain.html#结语">
+            
+                    
+                    结语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">参考手册</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="reference/system.html">
+            
+                <a href="reference/system.html">
+            
+                    
+                    系统组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="reference/component.html">
+            
+                <a href="reference/component.html">
+            
+                    
+                    常见Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="reference/brain_dec.html">
+            
+                <a href="reference/brain_dec.html">
+            
+                    
+                    Brain：修饰和组合节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="reference/brain_action.html">
+            
+                <a href="reference/brain_action.html">
+            
+                    
+                    Brain：动作节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >序言</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FD9;&#x4E2A;&#x7CFB;&#x5217;&#x8BB2;&#x4EC0;&#x4E48;">&#x8FD9;&#x4E2A;&#x7CFB;&#x5217;&#x8BB2;&#x4EC0;&#x4E48;</h1>
+<p>&#x89E3;&#x8BFB;&#x6E90;&#x7801;&#xFF0C;&#x7528;&#x5168;&#x65B0;&#x7684;&#x89C6;&#x89D2;&#x91CD;&#x65B0;&#x8BA4;&#x8BC6;&#x6211;&#x4EEC;&#x719F;&#x6089;&#x7684;&#x9965;&#x8352;&#x4E16;&#x754C;&#x3002;&#x6211;&#x4F1A;&#x8BB2;&#x89E3;&#x9965;&#x8352;&#x91CC;&#x6D89;&#x53CA;&#x7684;&#x57FA;&#x672C;&#x7F16;&#x7A0B;&#x6982;&#x5FF5;&#xFF0C;&#x6E38;&#x620F;&#x8FD0;&#x884C;&#x7684;&#x673A;&#x5236;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x6211;&#x5728;&#x51E0;&#x5E74;&#x524D;&#x66FE;&#x7ECF;&#x5174;&#x81F4;&#x52C3;&#x52C3;&#x5730;&#x60F3;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x9965;&#x8352;Mod&#x6559;&#x7A0B;&#xFF0C;&#x4F46;&#x540E;&#x6765;&#x5F03;&#x5751;&#x4E86;&#xFF0C;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x5199;&#x8D77;&#x6765;&#x592A;&#x8FC7;&#x8D39;&#x52B2;&#xFF0C;&#x6BCF;&#x4E00;&#x7BC7;&#x90FD;&#x8981;&#x5199;&#x4E0A;&#x4E07;&#x5B57;&#xFF0C;&#x67E5;&#x9605;&#x8BB8;&#x591A;&#x8D44;&#x6599;&#x3002;&#x5F53;&#x65F6;&#x8FD8;&#x662F;&#x4E2A;&#x521A;&#x5165;&#x884C;&#x7684;&#x7F16;&#x7A0B;&#x83DC;&#x9E1F;&#xFF0C;&#x5565;&#x90FD;&#x4E0D;&#x61C2;&#xFF0C;&#x8BFB;&#x6E90;&#x7801;&#x4E5F;&#x5F88;&#x5403;&#x529B;&#x3002;&#x8FD9;&#x51E0;&#x5E74;&#x6211;&#x5DF2;&#x7ECF;&#x6210;&#x957F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x8D44;&#x6DF1;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x5BF9;&#x7F16;&#x7A0B;&#x6709;&#x4E86;&#x6DF1;&#x5165;&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x8BFB;&#x6E90;&#x7801;&#x5DF2;&#x7ECF;&#x662F;&#x5982;&#x540C;&#x559D;&#x6C34;&#x4E00;&#x822C;&#x8F7B;&#x677E;&#x4E86;&#x3002;&#x4E0D;&#x8FC7;&#x5DE5;&#x4F5C;&#x6BD4;&#x8F83;&#x5FD9;&#xFF0C;&#x65F6;&#x95F4;&#x7D27;&#x5F20;&#xFF0C;&#x4E5F;&#x6CA1;&#x7CBE;&#x529B;&#x518D;&#x50CF;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#x5199;&#x4E0A;&#x4E07;&#x5B57;&#x7684;&#x8BE6;&#x7EC6;&#x6559;&#x7A0B;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x5C31;&#x6253;&#x7B97;&#x5148;&#x5199;&#x8FD9;&#x4E2A;&#x79D1;&#x666E;&#x5411;&#x7684;&#x7CFB;&#x5217;&#xFF0C;&#x5728;&#x6709;&#x9650;&#x7684;&#x65F6;&#x95F4;&#x7CBE;&#x529B;&#x884C;&#x4E0B;&#xFF0C;&#x7ED9;&#x5927;&#x5BB6;&#x5E26;&#x6765;&#x4E00;&#x4E9B;&#x5BF9;Mod&#x5236;&#x4F5C;&#x7684;&#x5174;&#x8DA3;&#x3002;&#x8FD9;&#x4E2A;&#x7CFB;&#x5217;&#x867D;&#x7136;&#x662F;&#x4EE5;&#x9965;&#x8352;&#x4E3A;&#x5207;&#x5165;&#x70B9;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x8BB2;&#x89E3;&#x7684;&#x662F;&#x6E38;&#x620F;&#x7F16;&#x7A0B;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x6982;&#x5FF5;&#x6BD4;&#x5982;Prefab&#x3001;Component&#x7B49;&#x7B49;&#xFF0C;&#x90FD;&#x662F;&#x7ECF;&#x5178;&#x7684;&#x6E38;&#x620F;&#x7F16;&#x7A0B;&#x6982;&#x5FF5;&#xFF0C;&#x5728;&#x8BB8;&#x591A;&#x6E38;&#x620F;&#x4E2D;&#x90FD;&#x662F;&#x76F8;&#x901A;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x7406;&#x89E3;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#xFF0C;&#x4E0D;&#x4EC5;&#x80FD;&#x7528;&#x5728;&#x5176;&#x5B83;&#x6E38;&#x620F;Mod&#x7684;&#x7F16;&#x7A0B;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x7531;&#x6B64;&#x5165;&#x95E8;&#x5C1D;&#x8BD5;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x6E38;&#x620F;&#x3002;</p>
+<h1 id="&#x8C01;&#x9002;&#x5408;&#x9605;&#x8BFB;&#xFF1F;">&#x8C01;&#x9002;&#x5408;&#x9605;&#x8BFB;&#xFF1F;</h1>
+<p>&#x60F3;&#x5B66;Mod&#x5236;&#x4F5C;&#x7684;&#xFF0C;&#x60F3;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5730;&#x56FE;&#x7684;&#xFF0C;&#x60F3;&#x81EA;&#x5DF1;&#x4FEE;&#x6539;Mod&#x7684;&#xFF0C;&#x60F3;&#x66F4;&#x597D;&#x5730;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x53F0;&#x7684;&#xFF0C;&#x60F3;&#x8981;&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x6E38;&#x620F;&#x673A;&#x5236;&#x7684;&#xFF0C;&#x603B;&#x4E4B;&#xFF0C;&#x5BF9;&#x9965;&#x8352;&#x7684;&#x4EE3;&#x7801;&#x548C;&#x8FD0;&#x8F6C;&#x673A;&#x5236;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x4E00;&#x5207;&#x73A9;&#x5BB6;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BFB;&#x4E00;&#x8BFB;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x6E38;&#x620F;&#x7F16;&#x7A0B;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x9965;&#x8352;&#x7684;&#x4EE3;&#x7801;&#x4E5F;&#x662F;&#x5F88;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x6750;&#x6599;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x60F3;&#x5B66;Mod&#x3001;&#x5236;&#x4F5C;&#x81EA;&#x5DF1;&#x7684;&#x5730;&#x56FE;&#x7684;&#x540C;&#x5B66;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x8FD9;&#x4E2A;&#x7CFB;&#x5217;&#xFF0C;&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x6E38;&#x620F;&#x7684;&#x7F16;&#x7A0B;&#x6846;&#x67B6;&#xFF0C;&#x964D;&#x4F4E;&#x9605;&#x8BFB;&#x6E38;&#x620F;&#x6E90;&#x7801;&#x7684;&#x95E8;&#x69DB;&#x3002;Mod&#x5236;&#x4F5C;&#x6709;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;&#x521A;&#x5165;&#x95E8;&#x7684;&#xFF0C;&#x53EA;&#x80FD;&#x8DDF;&#x7740;&#x6559;&#x7A0B;&#x4E00;&#x6B65;&#x6B65;&#x8D70;&#xFF0C;&#x505A;&#x51FA;&#x6559;&#x7A0B;&#x793A;&#x4F8B;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x8FD9;&#x4E2A;&#x57FA;&#x7840;&#x4E0A;&#x7A0D;&#x4F5C;&#x8C03;&#x6574;&#x3002;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x5728;&#x5927;&#x91CF;&#x5B66;&#x4E60;&#x4E86;&#x522B;&#x4EBA;&#x5199;&#x51FA;&#x6765;&#x7684;&#x6559;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;&#x628A;&#x77E5;&#x8BC6;&#x4E32;&#x8054;&#x8D77;&#x6765;&#xFF0C;&#x505A;&#x51FA;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x800C;&#x6700;&#x9AD8;&#x7EA7;&#x7684;Mod&#x5236;&#x4F5C;&#x8005;&#xFF0C;&#x5219;&#x662F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x9605;&#x8BFB;&#x6E38;&#x620F;&#x548C;&#x5176;&#x4ED6;Mod&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x4ECE;&#x4E2D;&#x83B7;&#x53D6;&#x77E5;&#x8BC6;&#xFF0C;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x5728;&#x6E38;&#x620F;&#x6846;&#x67B6;&#x5185;&#x5B9E;&#x73B0;&#x4EFB;&#x4F55;&#x9700;&#x6C42;&#x3002;&#x6211;&#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#x7684;&#x76EE;&#x7684;&#x4E4B;&#x4E00;&#xFF0C;&#x5C31;&#x662F;&#x6559;&#x5927;&#x5BB6;&#x5982;&#x4F55;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x6700;&#x9AD8;&#x7EA7;&#x7684;Mod&#x5236;&#x4F5C;&#x8005;&#x3002;</p>
+<p>&#x5373;&#x4F7F;&#x662F;&#x4E0D;&#x6253;&#x7B97;&#x505A;Mod&#x7684;&#x540C;&#x5B66;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#xFF0C;&#x5BF9;&#x6E38;&#x620F;&#x7684;&#x673A;&#x5236;&#x6709;&#x66F4;&#x672C;&#x8D28;&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x4ECE;&#x800C;&#x66F4;&#x597D;&#x5730;&#x73A9;&#x6E38;&#x620F;&#x3002;</p>
+<h1 id="&#x4F1A;&#x600E;&#x4E48;&#x8BB2;&#xFF1F;">&#x4F1A;&#x600E;&#x4E48;&#x8BB2;&#xFF1F;</h1>
+<p>&#x9996;&#x5148;&#x7B2C;&#x4E00;&#x671F;&#xFF0C;&#x6211;&#x4F1A;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E2A;&#x4E16;&#x754C;&#x7684;&#x6784;&#x6210;&#x5143;&#x7D20;&#xFF0C;&#x8FD9;&#x4E00;&#x671F;&#x4E0D;&#x4F1A;&#x6D89;&#x53CA;&#x5177;&#x4F53;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x662F;&#x4ECB;&#x7ECD;&#x5404;&#x79CD;&#x6982;&#x5FF5;&#xFF0C;&#x5EFA;&#x7ACB;&#x5BF9;&#x4E16;&#x754C;&#x7684;&#x6574;&#x4F53;&#x8BA4;&#x77E5;&#xFF0C;&#x4E3A;&#x540E;&#x7EED;&#x5B66;&#x4E60;&#x6253;&#x4E0B;&#x57FA;&#x7840;&#x3002;&#x63A5;&#x7740;&#x6211;&#x4F1A;&#x5728;&#x6BCF;&#x4E00;&#x671F;&#x91CC;&#x4ED4;&#x7EC6;&#x89E3;&#x8BFB;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x5199;&#x4E00;&#x4E2A;&#x5C0F;Mod&#x6765;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x5E94;&#x7528;&#x3002;Mod&#x4F1A;&#x53D1;&#x5E03;&#x5728;steam&#x521B;&#x610F;&#x5DE5;&#x574A;&#x4E0A;&#xFF0C;&#x4E5F;&#x4F1A;&#x53D1;&#x5E03;&#x5728;github&#x4E0A;&#x3002;</p>
+<p>&#x6211;&#x4E4B;&#x524D;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x9965;&#x8352;Mod&#x7B54;&#x7591;QQ&#x7FA4; 559477977&#xFF0C;&#x6B22;&#x8FCE;&#x52A0;&#x5165;&#x3002;</p>
+<h1 id="&#x6E90;&#x7801;&#x5728;&#x54EA;&#x91CC;&#xFF1F;">&#x6E90;&#x7801;&#x5728;&#x54EA;&#x91CC;&#xFF1F;</h1>
+<p>&#x5B98;&#x65B9;&#x7684;&#x6E90;&#x7801;&#x88AB;&#x6253;&#x5305;&#x6210;&#x4E86;&#x4E00;&#x4E2A;zip&#x6587;&#x4EF6;&#xFF0C;&#x4F4D;&#x4E8E;<code>&#x6E38;&#x620F;&#x6839;&#x76EE;&#x5F55;/data/databundles/scripts.zip</code>&#xFF0C;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x5373;&#x53EF;&#x9605;&#x8BFB;lua&#x6587;&#x4EF6;
+&#x521B;&#x610F;&#x5DE5;&#x574A;&#x7684;Mod&#x6E90;&#x7801;&#xFF0C;&#x4F4D;&#x4E8E;<code>&#x6E38;&#x620F;&#x6839;&#x76EE;&#x5F55;/mods/workshop-xxxx</code>&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x9605;&#x8BFB;&#x3002;
+&#x63A8;&#x8350;&#x5927;&#x5BB6;&#x4F7F;&#x7528;VS Code + lua&#x62D3;&#x5C55;&#x63D2;&#x4EF6;&#x8FDB;&#x884C;&#x9605;&#x8BFB;&#xFF0C;&#x6709;&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;&#xFF0C;&#x8FD8;&#x80FD;&#x4EE5;&#x9879;&#x76EE;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x6D4F;&#x89C8;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x539F;&#x751F;&#x7684;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x8981;&#x65B9;&#x4FBF;&#x5F97;&#x591A;&#x3002;</p>
+<h1 id="&#x9644;&#x52A0;&#x7684;&#x4EE3;&#x7801;">&#x9644;&#x52A0;&#x7684;&#x4EE3;&#x7801;</h1>
+<p>&#x90E8;&#x5206;&#x7AE0;&#x8282;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x5B66;&#x4E60;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x5236;&#x4F5C;&#x4E86;&#x5C0F;mod&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6211;&#x7684;&#x9879;&#x76EE;
+<a href="https://github.com/user919lx/dst_mod_tutorial" target="_blank">dst_mod_tutorial</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="main/c1_the_world.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 第一章 世界的构成">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"序言","level":"1.1","depth":1,"next":{"title":"第一章 世界的构成","level":"1.2","depth":1,"path":"main/c1_the_world.md","ref":"main/c1_the_world.md","articles":[{"title":"万物起源","level":"1.2.1","depth":2,"anchor":"#万物起源","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#万物起源","articles":[]},{"title":"灵魂","level":"1.2.2","depth":2,"anchor":"#灵魂","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#灵魂","articles":[]},{"title":"血肉","level":"1.2.3","depth":2,"anchor":"#血肉","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#血肉","articles":[]},{"title":"动起来","level":"1.2.4","depth":2,"anchor":"#动起来","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#动起来","articles":[]},{"title":"AI决策","level":"1.2.5","depth":2,"anchor":"#AI决策","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#AI决策","articles":[]},{"title":"世界地图","level":"1.2.6","depth":2,"anchor":"#世界地图","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#世界地图","articles":[]},{"title":"交互界面","level":"1.2.7","depth":2,"anchor":"#交互界面","path":"main/c1_the_world.md","ref":"main/c1_the_world.md#交互界面","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Don't Starve,饥荒","author":"LongFei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"源码看《饥荒》","language":"zh-hans","gitbook":"*","description":"从源码层面解读《饥荒》游戏"},"file":{"path":"README.md","mtime":"2022-03-12T02:45:29.500Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-19T11:11:39.081Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
