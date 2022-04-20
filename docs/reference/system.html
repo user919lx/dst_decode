@@ -792,15 +792,55 @@
 </tbody>
 </table>
 <h2 id="soundemitter">SoundEmitter</h2>
-<p>&#x58F0;&#x97F3;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x64AD;&#x653E;&#x7269;&#x4F53;&#x672C;&#x8EAB;&#x62E5;&#x6709;&#x7684;&#x97F3;&#x6548;&#x8D44;&#x6E90;&#x3002;
-| fn                  | &#x7528;&#x9014;&#x8BF4;&#x660E;                  | &#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;                                         | &#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;                               |
-|---------------------|-----------------------|-------------------------------------------------------|-------------------------------------|
-| PlaySound           | &#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;                | path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;                                           | &#x65E0;                                   |
-| KillSound           | &#x505C;&#x6B62;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;              | sound &#x97F3;&#x6548;&#x540D;                                             | &#x65E0;                                   |
-| PlayingSound        | &#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;           | sound &#x97F3;&#x6548;&#x540D;                                             | is_playing &#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x8BE5;&#x97F3;&#x6548;&#xFF0C;&#x53D6;&#x503C;&#x4E3A;true &#x6216; false |
-| SetParameter        | &#x8BBE;&#x7F6E;&#x97F3;&#x6548;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x67D0;&#x4E9B;&#x97F3;&#x6548;&#x7684;&#x64AD;&#x653E;&#x6548;&#x679C; | sound &#x97F3;&#x6548;&#x540D;;param &#x53C2;&#x6570;&#x540D;;value &#x53C2;&#x6570;&#x503C;                         | &#x65E0;                                   |
-| SetVolume           | &#x8BBE;&#x7F6E;&#x97F3;&#x91CF;                  | sound &#x97F3;&#x6548;&#x540D;;volume &#x97F3;&#x91CF;                                   | &#x65E0;                                   |
-| PlaySoundWithParams | &#x5E26;&#x7740;&#x53C2;&#x6570;&#x64AD;&#x653E;&#x97F3;&#x6548;              | path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;,param_tbl &#x53C2;&#x6570;&#x8868;&#xFF0C;&#x5F62;&#x5982;{param_a=xxx,param_b=xxx} | &#x65E0;                                   |</p>
+<p>&#x58F0;&#x97F3;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x64AD;&#x653E;&#x7269;&#x4F53;&#x672C;&#x8EAB;&#x62E5;&#x6709;&#x7684;&#x97F3;&#x6548;&#x8D44;&#x6E90;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PlaySound</td>
+<td>&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;</td>
+<td>path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>KillSound</td>
+<td>&#x505C;&#x6B62;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;</td>
+<td>sound &#x97F3;&#x6548;&#x540D;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>PlayingSound</td>
+<td>&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x6307;&#x5B9A;&#x97F3;&#x6548;</td>
+<td>sound &#x97F3;&#x6548;&#x540D;</td>
+<td>is_playing &#x662F;&#x5426;&#x5728;&#x64AD;&#x653E;&#x8BE5;&#x97F3;&#x6548;&#xFF0C;&#x53D6;&#x503C;&#x4E3A;true &#x6216; false</td>
+</tr>
+<tr>
+<td>SetParameter</td>
+<td>&#x8BBE;&#x7F6E;&#x97F3;&#x6548;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x67D0;&#x4E9B;&#x97F3;&#x6548;&#x7684;&#x64AD;&#x653E;&#x6548;&#x679C;</td>
+<td>sound &#x97F3;&#x6548;&#x540D;;param &#x53C2;&#x6570;&#x540D;;value &#x53C2;&#x6570;&#x503C;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>SetVolume</td>
+<td>&#x8BBE;&#x7F6E;&#x97F3;&#x91CF;</td>
+<td>sound &#x97F3;&#x6548;&#x540D;;volume &#x97F3;&#x91CF;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>PlaySoundWithParams</td>
+<td>&#x5E26;&#x7740;&#x53C2;&#x6570;&#x64AD;&#x653E;&#x97F3;&#x6548;</td>
+<td>path &#x97F3;&#x6548;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;,param_tbl &#x53C2;&#x6570;&#x8868;&#xFF0C;&#x5F62;&#x5982;{param_a=xxx,param_b=xxx}</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="transform">Transform</h2>
 <p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x5927;&#x5C0F;&#x3001;&#x65B9;&#x5411;&#x7B49;&#x3002;&#x5176;&#x4E2D;&#x300C;&#x5927;&#x5C0F;&#x300D;&#x4E0E;AnimState&#x6709;&#x533A;&#x522B;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;AnimState&#x8BBE;&#x7F6E;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x89C6;&#x89C9;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x800C;Transform&#x5219;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x7269;&#x4F53;&#x7684;&#x78B0;&#x649E;&#x7B49;&#x76F8;&#x5173;&#x7269;&#x7406;&#x6548;&#x679C;&#x3002;</p>
 <table>
@@ -920,11 +960,31 @@ MakeCharacterPhysics &#x7B49;</p>
 </tbody>
 </table>
 <h2 id="dynamicshadow">DynamicShadow</h2>
-<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x3002;&#x6BCF;&#x4E2A;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x90FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x751A;&#x81F3;&#x540C;&#x4E00;&#x4E2A;&#x89D2;&#x8272;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x88C5;&#x5907;&#x4E0B;&#x4E5F;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&#x3002;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x88C5;&#x5907;&#x4E0D;&#x540C;&#x7684;&#x96E8;&#x4F1E;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x5F71;&#x5B50;&#x7684;&#x53D8;&#x5316;&#x3002;
-| fn      | &#x7528;&#x9014;&#x8BF4;&#x660E;    | &#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;                              | &#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E; |
-|---------|---------|--------------------------------------------|-------|
-| SetSize | &#x8BBE;&#x7F6E;&#x5F71;&#x5B50;&#x5927;&#x5C0F;  | length_scale &#x957F;&#x5EA6;&#x7F29;&#x653E;;width_scale &#x5BBD;&#x5EA6;&#x7F29;&#x653E; &#x3002;&#x53D6;&#x503C;&#x586B;&#x5C0F;&#x6570;&#x3002; | &#x65E0;     |
-| Enable  | &#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6709;&#x5F71;&#x5B50; | &#x53D6;&#x503C; ture/false                              | &#x65E0;     |</p>
+<p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x3002;&#x6BCF;&#x4E2A;&#x7269;&#x4F53;&#x7684;&#x5F71;&#x5B50;&#x90FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x751A;&#x81F3;&#x540C;&#x4E00;&#x4E2A;&#x89D2;&#x8272;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x88C5;&#x5907;&#x4E0B;&#x4E5F;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&#x3002;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x88C5;&#x5907;&#x4E0D;&#x540C;&#x7684;&#x96E8;&#x4F1E;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x5F71;&#x5B50;&#x7684;&#x53D8;&#x5316;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>fn</th>
+<th>&#x7528;&#x9014;&#x8BF4;&#x660E;</th>
+<th>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x6309;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF09;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SetSize</td>
+<td>&#x8BBE;&#x7F6E;&#x5F71;&#x5B50;&#x5927;&#x5C0F;</td>
+<td>length_scale &#x957F;&#x5EA6;&#x7F29;&#x653E;;width_scale &#x5BBD;&#x5EA6;&#x7F29;&#x653E; &#x3002;&#x53D6;&#x503C;&#x586B;&#x5C0F;&#x6570;&#x3002;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>Enable</td>
+<td>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6709;&#x5F71;&#x5B50;</td>
+<td>&#x53D6;&#x503C; ture/false</td>
+<td>&#x65E0;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="light">Light</h2>
 <p>&#x8FD9;&#x4E00;&#x7EC4;&#x4EF6;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x5149;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x4E2A;&#x7269;&#x4F53;&#x6DFB;&#x52A0;&#x5149;&#x6E90;&#x5E76;&#x8C03;&#x6574;&#x8BBE;&#x7F6E;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x5982;&#x53D1;&#x5149;&#x534A;&#x5F84;&#x3001;&#x5F3A;&#x5EA6;&#x3001;&#x8870;&#x51CF;&#x5EA6;&#x7B49;&#x3002;</p>
 <table>
@@ -1107,7 +1167,7 @@ MakeCharacterPhysics &#x7B49;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"系统组件","level":"2.1","depth":1,"next":{"title":"常见Component","level":"2.2","depth":1,"path":"reference/component.md","ref":"reference/component.md","articles":[]},"previous":{"title":"结语","level":"1.6.6","depth":2,"anchor":"#结语","path":"main/c5_brain.md","ref":"main/c5_brain.md#结语","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Don't Starve,饥荒","author":"LongFei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"源码看《饥荒》","language":"zh-hans","gitbook":"*","description":"从源码层面解读《饥荒》游戏"},"file":{"path":"reference/system.md","mtime":"2022-03-12T01:23:42.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T03:10:49.554Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"系统组件","level":"2.1","depth":1,"next":{"title":"常见Component","level":"2.2","depth":1,"path":"reference/component.md","ref":"reference/component.md","articles":[]},"previous":{"title":"结语","level":"1.6.6","depth":2,"anchor":"#结语","path":"main/c5_brain.md","ref":"main/c5_brain.md#结语","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Don't Starve,饥荒","author":"LongFei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"源码看《饥荒》","language":"zh-hans","gitbook":"*","description":"从源码层面解读《饥荒》游戏"},"file":{"path":"reference/system.md","mtime":"2022-04-20T01:58:47.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T02:01:24.798Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
