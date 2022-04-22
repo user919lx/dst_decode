@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-todo": "^0.1.3"
+  }
+}
