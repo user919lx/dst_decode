@@ -14,7 +14,7 @@ StateGraph，直接翻译过来叫「状态图」，在游戏编程中有类似�
 
 
 
-![brain.png](https://s2.loli.net/2022/03/12/qMTKSxnJcOoivWL.png)
+![sg.png](/images/dst_sg.png)
 
 
 然后我们再来看看代码层面，来自文件`stategraphs/SGpig.lua`

@@ -31,8 +31,7 @@ DecoratorNode 正如其名，是个修饰节点，无任何效果，也未直接
 选择节点。访问的步骤是和SequenceNode一样的，只是把其中的FAILED和SUCCESS相关的部分对调了。这个节点在被访问到时，如果是RUNING状态，则继续访问上一次访问的RUNING子节点，否则，重新开始按顺序遍历访问全部子节点。直到其中一个子节点的状态为RUNING或SUCCESS，该子节点的状态就等同该节点的状态。如果所有子节点状态都不是RUNING或SUCCESS，则该节点的状态为FAILED。也就是说，这个节点会选择遍历到的第一个状态不是FAILED的节点。举例来说，可以做到这样的效果
 
 用一个实际例子来说明会更容易理解
-![SelectorNode.png](https://s2.loli.net/2022/01/23/rivnIyVaTsB5Peg.png)
-
+![SelectorNode](/images/SelectorNode.png)
 
 上图是一个简单的攻击选择器。首先尝试原地攻击，如果目标距离超过攻击范围，则FAILED。然后尝试追逐目标，缩短距离，如果成功缩短距离就SUCCESS，然后重新执行原地攻击。如果检测到有墙体，无法快速接近目标，则FAILED。接着就会访问破墙节点，尝试破坏墙体，成功后重新遍历操作。
 
